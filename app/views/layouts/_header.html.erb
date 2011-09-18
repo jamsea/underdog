@@ -1,0 +1,20 @@
+	<header id="banner" class="body">
+		<h1><a href="#">Jamie Hush</a></h1>
+		<strong>Personal Website</strong>
+		
+		<nav>
+			<ul>
+				<% if request.fullpath == '/' %>
+					<li class="active"><%= link_to "Home", root_path %></li>
+				<% else %>
+					<li><%= link_to "Home", root_path %></li>
+				<% end %>
+				
+				<% if request.fullpath == '/portfolio' %>
+					<li class="active"><%= link_to "Portfolio", portfolio_path %></li>
+				<% else %>
+					<li><%= link_to "Portfolio", portfolio_path %></li>
+				<% end %>
+			</ul>
+		</nav>
+	</header>
